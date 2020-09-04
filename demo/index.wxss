@@ -1,0 +1,33 @@
+/* demo1/index.wxss */
+page {
+  overflow-y: hidden;
+}
+.drawing-board, .drawing-board-image {
+  width: 100%;
+  height: 500rpx;
+  background-color: red;
+}
+.drawing-board-image {
+  margin-top: 10rpx;
+  background-color: blue;
+}
+.adjust-item {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+.adjust-item slider {
+  width: 65%;
+  display: inline-block;
+}
+.adjust-item-stroke-color {
+  margin-left: 14rpx;
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+.adjust-item-operation {
+  padding: 30rpx 20rpx;
+  color: blue;
+}

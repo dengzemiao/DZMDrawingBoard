@@ -1,0 +1,18 @@
+/* index/index.wxss */
+page {
+  overflow-y: hidden;
+}
+.drawing-board {
+  width: 100%;
+  height: 500rpx;
+  background-color: red;
+}
+.drawing-board-hint {
+  font-size: 30rpx;
+  color: yellowgreen;
+  padding: 10rpx;
+}
+button {
+  width: 100% !important;
+  text-align: left;
+}

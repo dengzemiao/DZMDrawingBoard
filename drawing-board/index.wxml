@@ -1,0 +1,14 @@
+<!--DZMDrawingBoard/index.wxml-->
+<view class="drawing-board">
+  <canvas
+    type="2d"
+    id="drawing-board-canvas"
+    class="drawing-board-canvas"
+    canvas-id="drawing-board-canvas"
+    bindtouchstart="touchStart"
+    bindtouchmove="touchMove"
+    bindtouchend="touchEnd"
+    bindtouchcancel="touchCancel"
+  >
+  </canvas>
+</view>

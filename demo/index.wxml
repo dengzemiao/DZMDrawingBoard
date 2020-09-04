@@ -1,0 +1,46 @@
+<!--demo1/index.wxml-->
+
+<!-- 使用画板 -->
+<view class="drawing-board">
+  <drawing-board
+    id="drawing-board"
+    line-width="{{lineWidth}}"
+    line-color="{{lineColor}}"
+    bg-color="{{bgColor}}"
+    bind:change="drawingBoardChange"
+  >
+  </drawing-board>
+</view>
+
+<!-- 调整画板属性 - 线宽 -->
+<view class="adjust-item">
+  线宽：
+  <slider bindchange="lineWidthChange" value="{{lineWidth}}" min="1" max="15"/>
+  {{ lineWidth }}
+</view>
+
+<!-- 调整画板属性 - 颜色 -->
+<view class="adjust-item">
+  颜色：
+  <view wx:for="{{['pink', 'rebeccapurple', '#000', 'yellowgreen', '#ccc']}}" class="adjust-item-stroke-color" data-color="{{item}}" style="background-color: {{item}};" bind:tap="lineColorChange"></view>
+</view>
+
+<!-- 调整画板属性 - 操作 -->
+<view class="adjust-item">
+  操作：
+  <view class="adjust-item-operation" bind:tap="touchClear">清空</view>
+  <view class="adjust-item-operation" bind:tap="touchRevoke">撤销</view>
+  <view class="adjust-item-operation" bind:tap="touchCreateImage">生成图片</view>
+  <view class="adjust-item-operation" bind:tap="touchSave">保存相册</view>
+</view>
+
+<!-- 调整画板属性 - 颜色 -->
+<view class="adjust-item">
+  背景：
+  <view wx:for="{{['pink', 'rebeccapurple', '#000', 'yellowgreen', '#ccc']}}" class="adjust-item-stroke-color" data-color="{{item}}" style="background-color: {{item}};" bind:tap="bgColorChange"></view>
+  <!-- 透明 -->
+  <view class="adjust-item-stroke-color" data-color="rgba(255, 255, 255, 0)" style="background-color: rgba(255, 255, 255, 0); border: 1px solid gray;" bind:tap="bgColorChange"> 透明 </view>
+</view>
+
+<!-- 显示生成图片 -->
+<image class="drawing-board-image" src="{{imageUrl}}" wx:if="{{imageUrl}}"></image>

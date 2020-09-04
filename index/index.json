@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "DZMDrawingBoard",
+  "usingComponents": {
+    "drawing-board": "../drawing-board/index"
+  }
+}

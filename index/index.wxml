@@ -1,0 +1,12 @@
+<!--index/index.wxml-->
+
+<!-- 原始画板 -->
+<view class="drawing-board">
+  <drawing-board></drawing-board>
+</view>
+
+<!-- 提示 -->
+<view class="drawing-board-hint">建议将画板放置不能滚动的页面，绘画手势跟滚动手势会存在一点冲突。CSS: page { overflow-y: hidden; }</view>
+
+<!-- 其他使用 -->
+<button bind:tap="touchDemo">点击 - 简单使用 - demo</button>
