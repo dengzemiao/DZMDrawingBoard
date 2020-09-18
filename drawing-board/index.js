@@ -44,7 +44,7 @@ Component({
     // ---------------------------- 公有方法 ----------------------------
     // 画板是否为空画板
     isEmpty () {
-      return !!this.data.strokes.length
+      return !this.data.strokes.length
     },
     // 清空画板笔画
     clear () {
